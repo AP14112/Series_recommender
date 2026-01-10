@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: series-recommender
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: series-recommender
+  template:
+    metadata:
+      labels:
+        app: series-recommender
+    spec:
+      containers:
+        - name: series-recommender
+          image: asia-south2-docker.pkg.dev/series-recommender/series-repo/series-recommender:latest
+          imagePullPolicy: IfNotPresent
+          envFrom:
+          - secretRef:
+              name: series-secrets
+          ports:
+            - containerPort: 8501
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: series-recommender-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: series-recommender
+  ports:
+    - port: 8501
+      targetPort: 8501
+      nodePort: 30007

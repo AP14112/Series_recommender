@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment & secrets
+.env
+.env.*
+
+# Streamlit secrets
+.streamlit/
+.streamlit/secrets.toml
+
+# Git & IDE
+.git
+.gitignore
+.vscode/
+.idea/
+
+# Virtual environments
+venv/
+.venv/
+env/
+myenv/
+
+# Logs
+logs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated artifacts (built inside Docker)
+faiss_db/
+data/processed_*.csv
+*.faiss
+*.pkl

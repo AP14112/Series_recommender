@@ -1,0 +1,12 @@
+setup.py
+app/__init__.py
+config/__init__.py
+pipeline/__init__.py
+src/__init__.py
+utils/__init__.py
+utils/custom_exception.py
+web_series_recommender.egg-info/PKG-INFO
+web_series_recommender.egg-info/SOURCES.txt
+web_series_recommender.egg-info/dependency_links.txt
+web_series_recommender.egg-info/requires.txt
+web_series_recommender.egg-info/top_level.txt
