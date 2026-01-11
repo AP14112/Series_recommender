@@ -11,7 +11,7 @@ venv/
 .venv/
 env/
 .streamlit/secrets.toml
-*.egg-info/
+web_series_recommender.egg-info/
 
 # Logs
 logs/
